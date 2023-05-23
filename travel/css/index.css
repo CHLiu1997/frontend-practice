@@ -1,0 +1,243 @@
+/* header part */
+body {
+  width: 1024px;
+  margin: 0 auto;
+}
+.header {
+  height: 380px;
+  width: 100%;
+  background-image: url(../img/Hero.png);
+  background-size: cover;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  font-size: 40px;
+  color: #ffffff;
+  letter-spacing: 3.89px;
+  right: 50%;
+  top: 30%;
+  transform: translateX(50%);
+}
+
+.menu {
+  position: absolute;
+  height: 48px;
+  width: 452px;
+  font-size: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  right: 50%;
+  top: 60%;
+  transform: translateX(50%);
+}
+
+.popularDistrict {
+  position: absolute;
+  height: 112px;
+  width: 800px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  right: 50%;
+  bottom: -20%;
+  transform: translateX(50%);
+}
+
+.popularText {
+  position: absolute;
+  font-size: 18px;
+  padding: 20px 0 0 26px;
+}
+
+.popular {
+  position: absolute;
+  display: flex;
+  right: 50%;
+  bottom: 20%;
+  transform: translateX(50%);
+}
+
+.popular li a {
+  display: block;
+  width: 130px;
+  padding: 11px 0;
+  margin: 0 15px;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.Zuoying {
+  background-color: #8a82cc;
+}
+
+.Yancheng {
+  background-color: #ffa782;
+}
+
+.Sanmin {
+  background-color: #f5d005;
+}
+
+.Gushan {
+  background-color: #559ac8;
+}
+/* content part */
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  padding-top: 130px;
+}
+
+.districtTitle {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 24px;
+  font-size: 36px;
+  color: #8a82cc;
+}
+
+.attractions {
+  position: relative;
+  width: 460px;
+  margin: 0 8px 36px 8px;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.attractionsPicture {
+  display: block;
+  height: 155px;
+  width: 100%;
+  padding-bottom: 15px;
+  object-fit: cover;
+}
+
+.attractionsText {
+  display: inline-flex;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.attractionsIcons {
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  object-fit: contain;
+  object-position: center center;
+  padding-right: 10px;
+}
+
+.attractionsName {
+  position: absolute;
+  left: 15px;
+  top: 125px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.attractionsZone {
+  position: absolute;
+  right: 15px;
+  top: 130px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* switchPageBtn part*/
+.switchPageBtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 20px;
+}
+
+.pageBtn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: #559ac8;
+  background-color: #ffffff;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1.5px solid #cbcbcb;
+  border-left: 1.5px solid #cbcbcb;
+  border-bottom: 1.5px solid #cbcbcb;
+}
+
+.prev {
+  padding: 0 5px;
+  width: 40px;
+  border-radius: 10% 0 0 10%;
+}
+
+.next {
+  padding: 0 5px;
+  width: 40px;
+  border-right: 1.5px solid #cbcbcb;
+  border-radius: 0 10% 10% 0;
+}
+
+.pageBtn:hover {
+  text-decoration: underline;
+}
+
+.current {
+  color: #ffffff;
+  background-color: #559ac8;
+}
+
+.disabled {
+  display: block;
+  user-select: none;
+  height: 30px;
+  color: #cbcbcb;
+  background-color: #ffffff;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1.5px solid #cbcbcb;
+  border-left: 1.5px solid #cbcbcb;
+  border-bottom: 1.5px solid #cbcbcb;
+}
+/* footer part */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 1024px;
+  margin: 0 auto;
+  background-color: #559ac8;
+}
+
+.footerText {
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footerText2 {
+  font-size: 14px;
+  line-height: 2em;
+  text-align: center;
+  color: #ffd366;
+}
