@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMI calculator</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+	<div class="container">
+		<section class="upper">
+			<img src="./img/bmic-logo.png" alt="BMICLogo">
+			<form class="formBox">
+				<div class="inputBox">
+					<label for="height"><span class="label">身高 cm</span></label>
+					<input type="number" name="height" id="height" placeholder="請輸入身高" class="textInput">
+					<label for="weight"><span class="label">體重 kg</span></label>
+					<input type="number" name="weight" id="weight" placeholder="請輸入體重" class="textInput">
+					<p class="noValueAlert"></p>
+				</div>
+				<div>
+					<button type="reset" class='submitBtn'>看結果</button>
+					<div class="result d-none">
+						<p class="resultNum"></p>
+						<p class="resultText">BMI</p>
+						<button type="reset" class='retestBtn'><img src="./img/icons-loop.png" alt=""></button>
+						<span class="retestText">重測</span>
+						<p class="resultStatu"></p>
+					</div>
+				</div>
+			<form>
+		</section>
+		<section class="lower">
+			<h2 class="bmiRecord">BMI 紀錄</h2>
+			<div class="list"></div>
+			<div class="clear"><a href="#" class="clearBtn">清除所有資料</a></div>
+		</section>
+		<div class="footer"><img src="./img/bmic-footer-logo.png" alt="BMICLogo"></div>
+	</div>
+	<script src="./js/index.js"></script>
+</body>
+</html>

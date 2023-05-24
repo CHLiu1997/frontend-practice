@@ -1,0 +1,329 @@
+.d-none {
+    display: none;
+}
+
+.container {
+    background-color: #eee;
+}
+
+.upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #424242;
+}
+
+/* 輸入資料 */
+.formBox {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.label {
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFD366;
+}
+
+.textInput {
+    margin: 7px 0 20px 0;
+    padding: 8px 0 4px 16px;
+    height: 30px;
+    width: 250px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background-color: rgba(255,255,255,0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+}
+
+input::-webkit-inner-spin-button,::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+::placeholder {
+    font-size: 24px;
+    font-family: 'SFNSDisplay';
+    color: rgba(255,255,255,0.50);
+}
+
+.textInput:focus {
+    border: 2px solid #FFD366;
+    box-shadow: 0 0 10px #FFD366;
+    outline: none;
+}
+
+.noValueAlert {
+    position: absolute;
+    bottom: -15px;
+    color: #FF1200;
+}
+
+/* 送出按鈕 */
+.submitBtn {
+    height: 120px;
+    width: 120px;
+    margin-left: 60px;
+    border-radius: 50%;
+    border: 0px solid;
+    font-size: 24px;
+    font-weight: bold;
+    color: #424242;
+    background-color: #FFD366;
+}
+
+.submitBtn:hover {
+    box-shadow: 0 0 10px #FFD366;
+    cursor: pointer;
+}
+
+.submitBtn:active {
+    background-color:#DEA921;
+    box-shadow: 0 0 0 #DEA921;
+}
+
+/* 結果顯示 */
+.result {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin-left: 60px;
+    border-radius: 50%;
+}
+
+.resultNum {
+    position: absolute;
+    font-size: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.resultText {
+    position: absolute;
+    font-size: 14px;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 重測按鈕 */
+.retestBtn {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid #424242;
+    bottom: 0%;
+    right: 0%;
+}
+
+.retestBtn:hover {
+    cursor: pointer;
+}
+
+.retestBtn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.retestText {
+    position: absolute;
+    font-size: 16px;
+    bottom: 5%;
+    right: -30%;
+    opacity: 0;
+}
+
+.fadeinAnime {
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+
+.fadeoutAnime {
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.resultStatu {
+    width: 100px;
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+}
+
+.result-green {
+    color: #86D73E;
+    border: 6px solid #86D73E;
+}
+
+.resultStatu-green {
+    color: #86D73E;
+}
+
+.retestBtn-green {
+    background-color: #86D73E;
+}
+
+.result-blue {
+    color: #31BAF9;
+    border: 6px solid #31BAF9;
+}
+
+.resultStatu-blue {
+    color: #31BAF9;
+}
+
+.retestBtn-blue {
+    background-color: #31BAF9;
+}
+
+.result-lightorange {
+    color: #FF982D;
+    border: 6px solid #FF982D;
+}
+
+.resultStatu-lightorange {
+    color: #FF982D;
+}
+
+.retestBtn-lightorange {
+    background-color: #FF982D;
+}
+
+.result-orange {
+    color: #FF6C02;
+    border: 6px solid #FF6C02;
+}
+
+.resultStatu-orange {
+    color: #FF6C02;
+}
+
+.retestBtn-orange {
+    background-color: #FF6C02;
+}
+
+.result-red {
+    color: #FF1200;
+    border: 6px solid #FF1200;
+}
+
+.resultStatu-red {
+    color: #FF1200;
+}
+
+.retestBtn-red {
+    background-color: #FF1200;
+}
+
+.lower {
+    margin: 48px 0;
+}
+
+/* 資料顯示區塊 */
+.bmiRecord {
+    font-size: 24px;
+    text-align: center;
+    color: #424242;
+    margin-bottom: 36px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 600px;
+    font-size: 12px;
+    color: #4A4A4A ;
+    background-color: #FFFFFF;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.content-green {
+    border-left: 7px solid #86D73F;
+}
+
+.content-blue {
+    border-left: 7px solid #31BAF9;
+}
+
+.content-lightorange {
+    border-left: 7px solid #FF982D;
+}
+
+.content-orange {
+    border-left: 7px solid #FF6C02;
+}
+
+.content-red {
+    border-left: 7px solid #FF1200;
+}
+
+.content {
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 23px;
+    position: absolute;
+	top: 50%;
+	transform: translateY(-50%)
+}
+
+.deleteBtn {
+    display: inline-block;
+    background-image: url(../img/trashcan.png);
+    height: 16px;
+    padding-left: 16px;
+    width: 0; 
+    overflow : hidden;
+    background-size: cover;
+}
+
+.clear {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.clearBtn {
+    padding: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #424242;
+    background-color: #FFD366;
+    border: 2px solid #424242;
+}
+
+.clearBtn:hover {
+    color: #FFD366;
+    background-color: #424242;
+}
+
+.footer{
+    height: 90px;
+    background-color: #FFD366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
