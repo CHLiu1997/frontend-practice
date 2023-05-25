@@ -12,22 +12,32 @@
   <body>
     <section class="header">
       <h1 class="title">高雄旅遊資訊</h1>
-      <select name="districtMenu" class="menu"></select>
-      <div class="popularDistrict">
+      <select name="districtSelector" class="selector"></select>
+      <div class="districtPopular">
         <span class="popularText">熱門行政區</span>
-        <ul class="popular">
-          <li><a href="#" class="Zuoying">左營區</a></li>
-          <li><a href="#" class="Yancheng">鹽埕區</a></li>
-          <li><a href="#" class="Sanmin">三民區</a></li>
-          <li><a href="#" class="Gushan">鼓山區</a></li>
+        <ul class="popularList">
+          <li>
+            <a href="#" class="Zuoying" data-zone = "左營區">左營區</a>
+          </li>
+          <li>
+            <a href="#" class="Yancheng" data-zone = "岡山區">岡山區</a>
+          </li>
+          <li>
+            <a href="#" class="Sanmin" data-zone = "三民區">三民區</a>
+          </li>
+          <li>
+            <a href="#" class="Gushan" data-zone = "鼓山區">鼓山區</a>
+          </li>
         </ul>
       </div>
     </section>
     <section class="content">
-      <span class="districtTitle">全部行政區</span>
+      <h2 class="districtTitle">全部行政區</h2>
+      <ul class="districtList">
+      </ul>
     </section>
     <section>
-      <ul class="switchPageBtn"></ul>
+      <ul class="pageList"></ul>
     </section>
     <section class="footer">
       <span class="footerText">高雄旅遊網</span>

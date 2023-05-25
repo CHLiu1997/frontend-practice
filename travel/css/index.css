@@ -21,7 +21,7 @@ body {
   transform: translateX(50%);
 }
 
-.menu {
+.selector {
   position: absolute;
   height: 48px;
   width: 452px;
@@ -35,7 +35,7 @@ body {
   transform: translateX(50%);
 }
 
-.popularDistrict {
+.districtPopular {
   position: absolute;
   height: 112px;
   width: 800px;
@@ -53,7 +53,7 @@ body {
   padding: 20px 0 0 26px;
 }
 
-.popular {
+.popularList {
   position: absolute;
   display: flex;
   right: 50%;
@@ -61,7 +61,7 @@ body {
   transform: translateX(50%);
 }
 
-.popular li a {
+.popularList li a {
   display: block;
   width: 130px;
   padding: 11px 0;
@@ -90,24 +90,25 @@ body {
 }
 /* content part */
 .content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   width: 100%;
-  margin: 0 auto;
   background-color: #f5f5f5;
   padding-top: 130px;
 }
 
 .districtTitle {
-  width: 100%;
   text-align: center;
-  padding-bottom: 24px;
   font-size: 36px;
+  padding-bottom: 24px;
   color: #8a82cc;
 }
 
-.attractions {
+.districtList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.attraction {
   position: relative;
   width: 460px;
   margin: 0 8px 36px 8px;
@@ -116,7 +117,7 @@ body {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.attractionsPicture {
+.attractionPicture {
   display: block;
   height: 155px;
   width: 100%;
@@ -124,15 +125,16 @@ body {
   object-fit: cover;
 }
 
-.attractionsText {
+.attractionText {
   display: inline-flex;
+  width: 95%;
   padding-left: 20px;
   padding-bottom: 10px;
   font-size: 16px;
   line-height: 1.1;
 }
 
-.attractionsIcons {
+.attractionIcon {
   display: inline-block;
   width: 16px;
   height: 20px;
@@ -141,7 +143,7 @@ body {
   padding-right: 10px;
 }
 
-.attractionsName {
+.attractionName {
   position: absolute;
   left: 15px;
   top: 125px;
@@ -149,7 +151,7 @@ body {
   color: #ffffff;
 }
 
-.attractionsZone {
+.attractionZone {
   position: absolute;
   right: 15px;
   top: 130px;
@@ -157,8 +159,8 @@ body {
   color: #ffffff;
 }
 
-/* switchPageBtn part*/
-.switchPageBtn {
+/* pageList part*/
+.pageList {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -195,7 +197,7 @@ body {
 }
 
 .pageBtn:hover {
-  text-decoration: underline;
+  font-size: 18px;
 }
 
 .current {
