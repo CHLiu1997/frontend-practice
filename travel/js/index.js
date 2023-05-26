@@ -28,15 +28,18 @@ for (let i = 0; i < allDataLen; i++) {
 
 // 指定 DOM 元素
 const selector = document.querySelector('.selector');
-const popularList = document.querySelector('.popularList');
-const districtTitle = document.querySelector('.districtTitle');
-const districtList = document.querySelector('.districtList');
-const pageList = document.querySelector('.pageList');
+const popularList = document.querySelector('.popular-list');
+const districtTitle = document.querySelector('.district-title');
+const districtList = document.querySelector('.district-list');
+const pageList = document.querySelector('.page-list');
+const goTopBtn = document.querySelector('.go-top');
 
 // 監聽事件
 selector.addEventListener('change', selectorList);
 popularList.addEventListener('click', UpdatePopList);
 pageList.addEventListener('click', switchPage);
+goTopBtn.addEventListener('click', goTop);
+selector.addEventListener('click', function(){console.log('test')});
 
 
 renderSelector();
@@ -44,30 +47,32 @@ displayData();
 renderList(currentPageData);
 renderPageList(tempData);
 
+
+
 function renderList(array) {
   let str = '';
   for (let i = 0; i < array.length; i++) {
     str +=
     `<li class="attraction">
       <div>
-        <img src="${array[i].Picture1}" alt="" class="attractionPicture">
+        <img src="${array[i].Picture1}" alt="" class="attraction-picture">
       </div>
-      <div class="attractionText">
-        <img src="./img/icons_clock.png" alt="" class="attractionIcon">
+      <div class="attraction-text">
+        <img src="./img/icons_clock.png" alt="" class="attraction-icon">
         <p>${array[i].Opentime}</p>
       </div>
-      <div class="attractionText">
-        <img src="./img/icons_pin.png" alt="" class="attractionIcon">
+      <div class="attraction-text">
+        <img src="./img/icons_pin.png" alt="" class="attraction-icon">
         <p>${array[i].Add}</p>
       </div>
-      <div class="attractionText">
-        <img src="./img/icons_phone.png" alt="" class="attractionIcon">
+      <div class="attraction-text">
+        <img src="./img/icons_phone.png" alt="" class="attraction-icon">
         <p>${array[i].Tel}</p>
       </div>
-      <div class="attractionName">
+      <div class="attraction-name">
         <p>${array[i].Name}</p>
       </div>
-      <div class="attractionZone">
+      <div class="attraction-zone">
         <p>${array[i].Zone}</p>
       </div>
     </li>`;
@@ -89,6 +94,7 @@ function renderSelector() {
     str += `<option value = "${zone[i]}">${zone[i]}</option>`;
   };
   selector.innerHTML = str;
+
 }
 
 function UpdatePopList(e) {
@@ -138,29 +144,24 @@ function renderPageList(data) {
     pre += `<li><span class="prev disabled">Prev</span></li>`;
   } else {
     pre += 
-    `<li><a href="#" class="pageBtn prev" data-page="${currentPage - 1}">Prev</a></li>`;
+    `<li><a href="#" class="page-btn prev" data-page="${currentPage - 1}">Prev</a></li>`;
   };
 
   if (currentPage >= pageTotal) {
     nxt += `<li><span class="next disabled">Next</span></li>`;
   } else {
     nxt += 
-    `<li><a href="#" class="pageBtn next" data-page="${currentPage + 1}">Next</a></li>`;
+    `<li><a href="#" class="page-btn next" data-page="${Number(currentPage) + 1}">Next</a></li>`;
   };
 
-  if (pageTotal <= 10 && pageTotal > 1) {
-    for(let i = 1; i <= pageTotal; i++) {
-      if (Number(currentPage) == i) {
-        str += `<li><a href="#" class="pageBtn current" data-page="${i}">${i}</a></li>`;
-      } else {
-        str += `<li><a href="#" class="pageBtn" data-page="${i}">${i}</a></li>`;
-      }
-    };
-    pageList.innerHTML = 
-    `${pre}${str}${nxt}`;
-  } else {
-    pageList.innerHTML = '';
-  };
+  for(let i = 1; i <= pageTotal; i++) {
+    if (Number(currentPage) == i) {
+      str += `<li><a href="#" class="page-btn current" data-page="${i}">${i}</a></li>`;
+    } else {
+      str += `<li><a href="#" class="page-btn" data-page="${i}">${i}</a></li>`;
+    }
+  pageList.innerHTML = `${pre}${str}${nxt}`;
+  }
 }
 
 function displayData() {
@@ -178,7 +179,6 @@ function displayData() {
       currentPageData.push(tempData[i]);
     }
   }
-  console.log(currentPageData);
 }
 
 function switchPage(e) {
@@ -186,7 +186,15 @@ function switchPage(e) {
   if (e.target.nodeName !== "A") return;
   let page = e.target.dataset.page;
   currentPage = page;
+  goTop();
   displayData();
   renderList(currentPageData);
   renderPageList(tempData);
+}
+
+function goTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }

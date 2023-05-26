@@ -35,7 +35,7 @@ body {
   transform: translateX(50%);
 }
 
-.districtPopular {
+.district-popular {
   position: absolute;
   height: 112px;
   width: 800px;
@@ -47,13 +47,13 @@ body {
   transform: translateX(50%);
 }
 
-.popularText {
+.popular-text {
   position: absolute;
   font-size: 18px;
   padding: 20px 0 0 26px;
 }
 
-.popularList {
+.popular-list {
   position: absolute;
   display: flex;
   right: 50%;
@@ -61,7 +61,7 @@ body {
   transform: translateX(50%);
 }
 
-.popularList li a {
+.popular-btn {
   display: block;
   width: 130px;
   padding: 11px 0;
@@ -95,17 +95,17 @@ body {
   padding-top: 130px;
 }
 
-.districtTitle {
+.district-title {
   text-align: center;
   font-size: 36px;
   padding-bottom: 24px;
   color: #8a82cc;
 }
 
-.districtList {
+.district-list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  padding-left: 35px;
 }
 
 .attraction {
@@ -117,7 +117,7 @@ body {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.attractionPicture {
+.attraction-picture {
   display: block;
   height: 155px;
   width: 100%;
@@ -125,7 +125,7 @@ body {
   object-fit: cover;
 }
 
-.attractionText {
+.attraction-text {
   display: inline-flex;
   width: 95%;
   padding-left: 20px;
@@ -134,7 +134,7 @@ body {
   line-height: 1.1;
 }
 
-.attractionIcon {
+.attraction-icon {
   display: inline-block;
   width: 16px;
   height: 20px;
@@ -143,7 +143,7 @@ body {
   padding-right: 10px;
 }
 
-.attractionName {
+.attraction-name {
   position: absolute;
   left: 15px;
   top: 125px;
@@ -151,7 +151,7 @@ body {
   color: #ffffff;
 }
 
-.attractionZone {
+.attraction-zone {
   position: absolute;
   right: 15px;
   top: 130px;
@@ -159,8 +159,8 @@ body {
   color: #ffffff;
 }
 
-/* pageList part*/
-.pageList {
+/* page-list part*/
+.page-list {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -168,7 +168,7 @@ body {
   padding-bottom: 20px;
 }
 
-.pageBtn {
+.page-btn {
   display: block;
   width: 30px;
   height: 30px;
@@ -196,7 +196,7 @@ body {
   border-radius: 0 10% 10% 0;
 }
 
-.pageBtn:hover {
+.page-btn:hover {
   font-size: 18px;
 }
 
@@ -220,6 +220,19 @@ body {
   border-bottom: 1.5px solid #cbcbcb;
 }
 /* footer part */
+.go-top{
+  position:fixed;
+  height: 24px;
+  width: 24px;
+  right: 10%;
+  bottom: 15%;
+}
+
+.go-top:hover{
+  cursor: pointer;
+  box-shadow: 0 0 5px #559AC8;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -231,13 +244,13 @@ body {
   background-color: #559ac8;
 }
 
-.footerText {
+.footer-text {
   font-size: 14px;
   text-align: center;
   color: #ffffff;
 }
 
-.footerText2 {
+.footer-text2 {
   font-size: 14px;
   line-height: 2em;
   text-align: center;
